@@ -1,0 +1,14 @@
+sudo nano /etc/docker/daemon.json
+
+{
+  "bip": "192.168.0.100/24",
+  "default-address-pools": [
+    {
+      "base": "192.168.0.100/24",
+      "size": 24
+    }
+  ]
+}
+
+sudo systemctl restart docker
+
